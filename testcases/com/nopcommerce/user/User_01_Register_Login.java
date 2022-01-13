@@ -22,7 +22,12 @@ public class User_01_Register_Login {
 	
 	@Test
 	public void TC_03() {
-		
+	
+	}
+	
+	@Test
+	public void TC_04() {
+	
 	}
 	
 	@AfterClass
