@@ -101,7 +101,7 @@ public class Level_06_Login_Apply_Page_Generator_Manager extends BaseTest {
 		loginPage.inputToPasswordTextbox(wrongPassword);
 		loginPage.clickToLoginButton();
 		
-			Assert.assertEquals(loginPage.getErrorMessageUnsuccessful(), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
+		Assert.assertEquals(loginPage.getErrorMessageUnsuccessful(), "Login was unsuccessful. Please correct the errors and try again.\nThe credentials provided are incorrect");
 	}
 	
 	@Test
