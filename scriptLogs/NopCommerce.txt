@@ -1,0 +1,9 @@
+[2022-05-24 16:06:22,989]  -------------------------- PASSED -------------------------- 
+[2022-05-24 16:06:23,001] Step 01: Click Button My Account
+[2022-05-24 16:06:24,107] Step 02: Click To Move Change Password Tab
+[2022-05-24 16:06:28,596] Step 03: Enter old pasword in textbox with value is '123456'
+[2022-05-24 16:06:28,678] Step 04: Enter new pasword in textbox with value is '1234567'
+[2022-05-24 16:06:28,769] Step 05: Enter confirm pasword in textbox with value is '123123123'
+[2022-05-24 16:06:28,855] Step 06: Click to save pasword
+[2022-05-24 16:06:28,914] Step 07: Verify message
+[2022-05-24 16:06:28,961]  -------------------------- FAILED -------------------------- 

@@ -46,5 +46,6 @@
 	<classpathentry kind="lib" path="libLog4J/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="libLog4J/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="web-driver-manager/commons-lang-2.6.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
