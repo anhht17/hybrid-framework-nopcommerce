@@ -10,4 +10,49 @@ public class AddEmployeePO extends BasePage{
 	public AddEmployeePO(WebDriver driver) {
 		this.driver = driver;
 	}
+
+	public void enterToFirstNameTextbox(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void enterToLastNameTextbox(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String getEmployeeID() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void clickToCreateLoginDetailsCheckbox() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void enterToUserNameTextbox(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void enterToPasswordTextbox(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void enterToConfirmPasswordTextbox(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void selectValueInStatusDropdown(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public PersonalDetailPO clickToSaveButton() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

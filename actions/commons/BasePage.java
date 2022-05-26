@@ -17,6 +17,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageUIsHrm.BasePageUI;
+
 public class BasePage {
 	private long longTimeOut = 30;
 	
@@ -283,6 +285,11 @@ public class BasePage {
 		 Actions action = new Actions(driver);
 		 action.moveToElement(getWebElement(driver, locatorType)).perform();
 	 } 
+	 
+	 public void hoverMouseToElement(WebDriver driver, String locatorType, String... params ) {
+		 Actions action = new Actions(driver);
+		 action.moveToElement(getWebElement(driver, getDynamicXpath(locatorType, params))).perform();
+	 } 
 
 	public void scrollToBottomPage(WebDriver driver) {
 		((JavascriptExecutor) driver).executeScript("window.scrollBy(0,document.body.scrollHeight)");
@@ -400,4 +407,36 @@ public class BasePage {
 		Actions action = new Actions(driver);
 		action.sendKeys(getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)), key).perform();
 	}
+	
+	//HRM - MENU
+	public void openMenuPage(WebDriver driver, String menuPageName) {
+		waitForElementClickable(driver, BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+		clickToElement(driver, BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+	}
+	
+	//HRM - SUB MENU
+	public void openSubMenuPage(WebDriver driver, String menuPageName, String subMenuPageName) {
+		waitForElementClickable(driver, BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+		clickToElement(driver, BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+		
+		waitForElementClickable(driver, BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+		clickToElement(driver, BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+	}
+	
+	//HRM - CHILD SUB MENU
+		public void openChildSubMenuPage(WebDriver driver, String menuPageName, String subMenuPageName, String childSubMenuPageName) {
+			waitForElementClickable(driver, BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+			clickToElement(driver, BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+			
+			waitForElementVisible(driver, BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+			hoverMouseToElement(driver, BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+			
+			waitForElementClickable(driver, BasePageUI.MENU_BY_PAGE_NAME, childSubMenuPageName);
+			clickToElement(driver, BasePageUI.MENU_BY_PAGE_NAME, childSubMenuPageName);
+		}
+	
+		public void clickToButtonByID(WebDriver driver, String buttonIdName) {
+			waitForElementClickable(driver, BasePageUI.BUTTON_BY_ID, buttonIdName);
+			clickToElement(driver, BasePageUI.BUTTON_BY_ID, buttonIdName);
+		}
 }

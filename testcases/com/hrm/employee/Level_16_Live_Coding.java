@@ -34,7 +34,8 @@ public class Level_16_Live_Coding extends BaseTest{
 	@Test
 	public void Employee_01_Add_New_Employee() {
 		log.info("Add_New_01 - Step 01: Open 'Employee List' page");
-		employeeListPage = dashboardPage.openEmplyeeListPage();
+		dashboardPage.openSubMenuPage(driver, "PIM", "Employee List");
+		employeeListPage = PageGenerator.getEmployeeListPage(driver);
 		
 		log.info("Add_New_01 - Step 02: Click to 'Add' button");
 		addEmployeePage = employeeListPage.clickToAddButton();
@@ -67,7 +68,8 @@ public class Level_16_Live_Coding extends BaseTest{
 		personalDetailPage = addEmployeePage.clickToSaveButton();
 		
 		log.info("Add_New_01 - Step 12: Open 'Employee List' page");
-		employeeListPage = personalDetailPage.openEmplyeeListPage();
+		personalDetailPage.openSubMenuPage(driver, "PIM", "Employee List");
+		employeeListPage = PageGenerator.getEmployeeListPage(driver);
 		
 		log.info("Add_New_01 - Step 13: Enter valid info to 'Employee Name' textbox");
 		employeeListPage.enterToEmployeeNameTextbox("");
